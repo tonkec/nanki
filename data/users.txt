@@ -1,0 +1,2 @@
+# After cloning project add in .gitignore
+data/users.txt
