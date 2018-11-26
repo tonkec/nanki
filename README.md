@@ -28,11 +28,12 @@ When the player has finished answering, he is taken to his final score with a co
 
 ### Features to add
 
-- Landing / login page
 - Leader-board, top 10 scores
 - Syllabaries challenge
 
 ### Existing features
+
+- Landing / login page
 
 ## Tech used
 
