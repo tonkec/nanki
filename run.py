@@ -17,6 +17,7 @@ hots=os.getenv('IP'), port=os.getenv('PORT')
 
 from flask import Flask, render_template, request, redirect
 from datetime import datetime
+import json
 
 app = Flask(__name__)
 
@@ -34,6 +35,15 @@ def index():
 @app.route('/<username>')
 def user_page(username):
     return render_template("quiz-sel.html", user=username)
+
+
+@app.route('/<username>/<kana>')
+def quiz(username, kana):
+    with open('data/syllabary.json', 'r') as kanji_data:
+        kanjis = json.load(kanji_data)
+        guess = kanjis[0]
+
+    return render_template('quiz.html', user=username, guess=guess, kana=kana)
 
 
 if __name__ == '__main__':

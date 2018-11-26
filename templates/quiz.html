@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section id="question">
+    <img src="../static/{{ guess[kana] }}" alt="character to guess">
+</section>
+
+<section id="answer">
+    <form id="answer-form" method="POST">
+        <input type="text" name="answer" maxlength="4" size="4">
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<section id="help">
+    <!-- helper for writing -->
+</section>
+
+{% endblock %}

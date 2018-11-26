@@ -71,3 +71,12 @@ body {
 	#main-quiz-sel>div {
 		padding: 20px;
 	}
+/*
+				===== QUIZ =====
+*/
+#question,
+#answer {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
