@@ -1,5 +1,6 @@
-/*
-				___ Nan'Ki Custom CSS Rules___
+/*					==============================
+						Nan'Ki Custom CSS Rules
+					==============================
 */
 /*
 				___COMMON RULES (mobile first)___
@@ -8,4 +9,53 @@
 */
 html {
 	font-size: 14px;
+}
+body {
+	background-color: #FFF7D0;
+}
+#base-main {
+	display: block;
+	position: relative;
+	width: 100%;
+	top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+/*					--- Navigation ---
+*/
+#navbar, #footer {
+	background-image: url('../img/graphics/pattern.jpg');
+	background-repeat: repeat;
+}
+#footer {
+		background-position: center center;
+}
+	#nav-logo {
+		height: 50px;
+	}
+	#navbar a {
+		color: black;
+		text-decoration: none;
+	}
+/*
+				===== INDEX =====
+*/
+#landing {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#logo {
+	display: block;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#login-form label,
+#login-form input,
+#login-form button {
+	display: block;
+	position: relative;
+	margin: 5px auto;
+	text-align: center;
 }
