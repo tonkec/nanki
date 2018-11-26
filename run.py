@@ -28,22 +28,27 @@ def index():
         with open("data/users.txt", "a") as user_list:
             now = datetime.now().strftime("%Y.%m.%d : %H:%M:%S")
             user_list.writelines(now + " - " + request.form["username"] + " - logged in\n")
-        return redirect(request.form["username"])
+        return redirect("log/" + request.form["username"])
     return render_template('index.html')
 
 
-@app.route('/<username>')
+@app.route('/log/<username>')
 def user_page(username):
     return render_template("quiz-sel.html", user=username)
 
 
-@app.route('/<username>/<kana>')
+@app.route('/log/<username>/<kana>')
 def quiz(username, kana):
     with open('data/syllabary.json', 'r') as kanji_data:
         kanjis = json.load(kanji_data)
         guess = kanjis[0]
 
     return render_template('quiz.html', user=username, guess=guess, kana=kana)
+
+
+@app.route('/leader-board')
+def leaderboard():
+    return render_template('leader-board.html')
 
 
 if __name__ == '__main__':
