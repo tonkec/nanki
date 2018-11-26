@@ -1,0 +1,32 @@
+[
+  {
+    "name": "a",
+    "katakana": "img/katakana/a.jpg",
+    "hiragana": "img/hiragana/a.jpg",
+    "romaji": "img/romaji/a.jpg"
+  },
+  {
+    "name": "i",
+    "katakana": "img/katakana/i.jpg",
+    "hiragana": "img/hiragana/i.jpg",
+    "romaji": "img/romaji/i.jpg"
+  },
+  {
+    "name": "u",
+    "katakana": "img/katakana/u.jpg",
+    "hiragana": "img/hiragana/u.jpg",
+    "romaji": "img/romaji/u.jpg"
+  },
+  {
+    "name": "e",
+    "katakana": "img/katakana/e.jpg",
+    "hiragana": "img/hiragana/e.jpg",
+    "romaji": "img/romaji/e.jpg"
+  },
+  {
+    "name": "o",
+    "katakana": "img/katakana/o.jpg",
+    "hiragana": "img/hiragana/o.jpg",
+    "romaji": "img/romaji/o.jpg"
+  }
+]
