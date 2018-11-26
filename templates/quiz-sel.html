@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 id="usr-greet">Hi {{ user }}</h1>
+
+<main id="main-quiz-sel">
+	<p>Choose your quizz</p>
+    <div id="play-kata" class="sel-button">
+        <a class="btn btn-default btn-lg" href="#">Katakana</a>
+    </div>
+    <div id="play-hira" class="sel-button">
+        <a class="btn btn-default btn-lg" href="#">Hiragana</a>
+    </div>
+</main>
+
+{% endblock %}

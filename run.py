@@ -15,15 +15,25 @@ hots=os.getenv('IP'), port=os.getenv('PORT')
 """
 
 
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request, redirect
+from datetime import datetime
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def index():
+    if request.method == "POST":
+        with open("data/users.txt", "a") as user_list:
+            now = datetime.now().strftime("%Y.%m.%d : %H:%M:%S")
+            user_list.writelines(now + " - " + request.form["username"] + " - logged in\n")
+        return redirect(request.form["username"])
     return render_template('index.html')
+
+
+@app.route('/<username>')
+def user_page(username):
+    return render_template("quiz-sel.html", user=username)
 
 
 if __name__ == '__main__':
